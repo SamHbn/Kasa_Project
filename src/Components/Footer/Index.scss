@@ -4,21 +4,25 @@
     width: 100%;
     height: 209px;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative;
     background-color: $secondary-color;
 }
 
 .footer-logo {
-    display: flex;
-    color: white;
-    justify-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .footer p {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    margin: 0px;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
     color: white;
     font-family: $font-stack;
     font-weight: 500;

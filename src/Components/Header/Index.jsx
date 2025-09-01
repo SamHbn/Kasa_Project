@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import logo from "../../Assets/header-logo.png"
 import "./Index.scss"
 
@@ -10,8 +10,18 @@ export default function Header() {
             </div>
             <nav>
                 <ul>
-                    <li><Link to="/">Acceuil</Link></li>
-                    <li><Link to="/about">A Propos</Link></li>
+                    <li>
+                        <NavLink 
+                            to="/" end
+                            className={({isActive}) => isActive ? "active" : ""}>
+                            Acceuil</NavLink>
+                    </li>
+                    <li>
+                        <NavLink 
+                            to="/about"
+                            className={({isActive}) => isActive ? "active" : ""}>
+                            A Propos</NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>
