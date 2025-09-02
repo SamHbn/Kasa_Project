@@ -1,7 +1,11 @@
-export default function Card() {
-    return (
-        <div className="contener-card">
+import './Index.scss'
 
-        </div>
-    )
+export default function Card({ title, cover }) {
+  return (
+    <div className="container-card">
+      <img src={cover} alt={title} />
+      <div className="overlay"></div>
+      <h1>{title}</h1>
+    </div>
+  )
 }

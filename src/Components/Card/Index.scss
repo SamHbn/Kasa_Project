@@ -1,4 +1,38 @@
-.contener-card {
-    width: 340px;
-    height: 340px;
+@import '../../Styles/variables';
+
+.container-card {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  display: flex;
+  background-color: $primary-color;
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    border-radius: 10px;
+  }
+
+  h1 {
+    position: absolute;
+    width: 60%;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    color: white;
+    font-family: $font-stack;
+    font-weight: 700;
+    font-size: 18px;
+  }
 }

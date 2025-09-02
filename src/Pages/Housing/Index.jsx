@@ -1,3 +1,3 @@
 export default function Housing() {
-    return
+  return <h1>BUILDING PAGE !!!</h1>
 }
