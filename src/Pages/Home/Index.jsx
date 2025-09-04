@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import Banner from '../../Components/Home-banner/Index'
 import Card from '../../Components/Card/Index'
 import logements from '../../Data/Logements.json'
@@ -9,11 +10,13 @@ export default function Home() {
       <Banner />
       <div className="gallery">
         {logements.map((logement) => (
-          <Card
-            key={logement.id}
-            title={logement.title}
-            cover={logement.cover}
-          />
+          <NavLink to={`/Housing/${logement.id}`} key={logement.id}>
+            <Card
+              key={logement.id}
+              title={logement.title}
+              cover={logement.cover}
+            />
+          </NavLink>
         ))}
       </div>
     </div>
