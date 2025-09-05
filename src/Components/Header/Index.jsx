@@ -16,7 +16,7 @@ export default function Header() {
               end
               className={({ isActive }) => (isActive ? 'active' : '')}
             >
-              Acceuil
+              Accueil
             </NavLink>
           </li>
           <li>

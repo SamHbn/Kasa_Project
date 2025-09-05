@@ -1,19 +1,20 @@
 import logements from '../../Data/Logements.json'
 import { useParams } from 'react-router-dom'
-import Error from '../Error/Index'
+import { Navigate } from 'react-router-dom'
+import Slideshow from '../../Components/Slideshow/Index'
 
 export default function Housing() {
   const { id } = useParams()
   const logement = logements.find((logement) => logement.id === id)
 
   if (!logement) {
-    return Error
+    return <Navigate to="/error" />
   }
 
   return (
     <div>
       <div>
-        <img src={logement.cover} />
+        <Slideshow />
       </div>
       <div>
         <h2>{logement.title}</h2>

@@ -13,7 +13,7 @@ export default function AppRouter() {
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/housing/:id" element={<Housing />} />
-          <Route path="*" element={<Error />} />
+          <Route path="/error" element={<Error />} />
         </Route>
       </Routes>
     </Router>

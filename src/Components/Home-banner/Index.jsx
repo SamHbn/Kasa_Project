@@ -7,7 +7,6 @@ export default function Banner() {
       className="hero-banner"
       style={{ backgroundImage: `url(${bannerImage})` }}
     >
-      <div className="overlay"></div>
       <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
     </div>
   )

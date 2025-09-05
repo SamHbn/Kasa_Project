@@ -1,5 +1,5 @@
-@import '../../Styles/variables';
-@import '../../Styles/globals';
+@use '../../Styles/variables' as *;
+@use '../../Styles/globals' as *;
 
 .collapse {
   width: 100%;
