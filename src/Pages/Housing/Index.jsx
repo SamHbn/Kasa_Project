@@ -9,11 +9,12 @@ import './Index.scss'
 export default function Housing() {
   const { id } = useParams()
   const logement = logements.find((logement) => logement.id === id)
-  const [firstName, lastName] = logement.host.name.split(' ')
 
   if (!logement) {
     return <Navigate to="/error" />
   }
+
+  const [firstName, lastName] = logement.host.name.split(' ')
 
   return (
     <div>
@@ -58,14 +59,13 @@ export default function Housing() {
         <Collapse
           title="Description"
           content={logement.description}
-          className="collapse-housing"
           titleTag="h3"
         />
         <Collapse
           title="Équipements"
           content={logement.equipments}
-          className="collapse-housing"
           titleTag="h3"
+          className="collapse-equipements"
         />
       </div>
     </div>

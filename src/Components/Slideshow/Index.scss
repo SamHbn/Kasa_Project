@@ -12,6 +12,11 @@
     height: 100%;
   }
 
+  @media (max-width: 768px) {
+    height: 255px;
+    margin-bottom: 15px;
+  }
+
   .image-fond {
     @extend %absolute-fill;
     object-fit: cover;
@@ -27,9 +32,17 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 768px) {
+      padding: 5px;
+    }
+
     .arrowLeft,
     .arrowRight {
       cursor: pointer;
+
+      @media (max-width: 768px) {
+        height: 20px;
+      }
     }
   }
 
@@ -44,5 +57,9 @@
     font-size: 18px;
     color: white;
     z-index: 1;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

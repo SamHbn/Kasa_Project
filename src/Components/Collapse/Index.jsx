@@ -21,7 +21,7 @@ export default function Collapse({
           className={isOpen ? 'open' : ''}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <img src={vector} />
+          <img src={vector} alt="toggle collapse" />
         </button>
       </div>
       <div
@@ -31,7 +31,15 @@ export default function Collapse({
           height: isOpen ? contentRef.current?.scrollHeight : 0,
         }}
       >
-        <p>{content}</p>
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{content}</p>
+        )}
       </div>
     </div>
   )
