@@ -53,31 +53,11 @@
   }
 }
 
-.tags ul {
+.tags {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
-
-  li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 25px;
-    min-width: 115px;
-    padding: 0 30px;
-    list-style: none;
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-    background-color: $primary-color;
-    border-radius: 10px;
-
-    @media (max-width: 768px) {
-      min-width: 84px;
-      font-size: 10px;
-      padding: 0 10px;
-    }
-  }
 }
 
 .host {
@@ -110,17 +90,6 @@
       width: 32px;
       height: 32px;
     }
-  }
-}
-
-.rating {
-  font-size: 24px;
-  display: flex;
-  gap: 10px;
-
-  @media (max-width: 768px) {
-    font-size: 13px;
-    gap: 5px;
   }
 }
 

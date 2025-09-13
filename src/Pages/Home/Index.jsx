@@ -6,16 +6,12 @@ import './Index.scss'
 
 export default function Home() {
   return (
-    <div>
+    <div className="main">
       <Banner />
       <div className="gallery">
-        {logements.map((logement) => (
-          <NavLink to={`/Housing/${logement.id}`} key={logement.id}>
-            <Card
-              key={logement.id}
-              title={logement.title}
-              cover={logement.cover}
-            />
+        {logements.map((logement, index) => (
+          <NavLink to={`/Housing/${logement.id}`} key={index}>
+            <Card title={logement.title} cover={logement.cover} />
           </NavLink>
         ))}
       </div>

@@ -2,8 +2,9 @@ import logements from '../../Data/Logements.json'
 import { useParams } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import Slideshow from '../../Components/Slideshow/Index'
-import { FaStar } from 'react-icons/fa'
 import Collapse from '../../Components/Collapse/Index'
+import Rating from '../../Components/Rating/Index'
+import Tag from '../../Components/Tag/Index'
 import './Index.scss'
 
 export default function Housing() {
@@ -26,13 +27,11 @@ export default function Housing() {
             <p>{logement.location}</p>
           </div>
 
-          <div className="tags">
-            <ul>
-              {logement.tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
-          </div>
+          <ul className="tags">
+            {logement.tags.map((tag, index) => (
+              <Tag key={index} label={tag} />
+            ))}
+          </ul>
         </div>
 
         <div className="right">
@@ -45,14 +44,7 @@ export default function Housing() {
             <img src={logement.host.picture} />
           </div>
 
-          <div className="rating">
-            {[...Array(5)].map((_, i) => (
-              <FaStar
-                key={i}
-                color={i < logement.rating ? '#ff6060' : '#E3E3E3'}
-              />
-            ))}
-          </div>
+          <Rating value={logement.rating} />
         </div>
       </div>
       <div className="details">

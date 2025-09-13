@@ -5,13 +5,13 @@ import './Index.scss'
 
 export default function About() {
   return (
-    <div>
+    <>
       <AboutBanner />
       <div className="about-collapses">
         {aboutData.map((item, index) => (
           <Collapse key={index} title={item.title} content={item.content} />
         ))}
       </div>
-    </div>
+    </>
   )
 }

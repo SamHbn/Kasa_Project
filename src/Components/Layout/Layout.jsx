@@ -6,10 +6,12 @@ import './Index.scss'
 export default function Layout() {
   return (
     <div className="layout">
-      <Header />
-      <main>
-        <Outlet />
-      </main>
+      <div className="page-container">
+        <Header />
+        <main>
+          <Outlet />
+        </main>
+      </div>
       <Footer />
     </div>
   )

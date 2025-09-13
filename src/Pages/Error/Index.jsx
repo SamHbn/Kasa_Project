@@ -9,7 +9,7 @@ export default function Error() {
         Oups! La page
         <br className="mobile-break" /> que vous demandez n'existe pas.
       </p>
-      <Link to="/" className="lien">
+      <Link to="/" className="return-home">
         Retourner sur la page d'accueil
       </Link>
     </div>
