@@ -1,0 +1,13 @@
+.about-collapses {
+  width: 1023px;
+  margin: 45px auto 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (max-width: 768px) {
+    width: 335px;
+    margin: 20px 0;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 335px;
+  }
+
+  main {
+    width: 100%;
+  }
+}
